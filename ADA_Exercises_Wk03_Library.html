@@ -2,13 +2,63 @@
 <html>
 <head>
 	<title>My Library</title>
+	<link href='ADA_Exercises_Wk03_Library.css' type='text/css' rel='stylesheet'/>
 </head>
 <body>
 	<h1 id='bookTitle'></h1>
+	<h2 id='isbn'></h2>
 	<h2 id='bookAuthor'></h2>
+	<h2 id='publisher'></h2>
 	<h2 id='bookDesc'></h2>
 	<h2 id='bookPages'></h2>
 	<h2 id='bookAvail'></h2>
+	
+	<table id='bookList'>Book List
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Publisher</th>
+			<th>ISBN</th>
+			<th>Status</th>
+			<th>Loan</th>
+		</tr>
+		<tr>
+			<td>Waking Gods</td>
+			<td>Sylvain Neuvel</td>
+			<td>Penguin</td>
+			<td>978-0718181710</td>
+			<td id='bookStatus'></td>
+			<td><button onclick='loanBook()' class='onLoan'>Loan</button></td>
+		</tr>
+		<!-- <tr>
+			<td>The Summer Dragon</td>
+			<td>Todd Lockwood</td>
+			<td>DAW</td>
+			<td>978-0756408336</td>
+			<td><button class='onLoan'>Loan</button></td>
+		</tr> -->
+	</table>
+	<hr/>
+		
+<table id='newBookTable'>Add New Book
+	<tr>
+		<td>Title</td>	
+		<td><input type='text' id='newTitle'></td>		
+	</tr>
+	<tr>
+		<td>Author</td>
+		<td><input type='text' id='newAuthor'></td>
+	</tr>
+	<tr>
+		<td>Publisher</td>
+		<td><input type='text' id='newPublisher'></td>
+	</tr>
+	<tr>
+		<td>ISBN</td>
+		<td><input type='text' id='newIsbn'></td>
+	</tr>
+</table>
+<button onclick='createBook()' id='addNewBook'>Add Book</button>
 
 
 <script type="text/javascript" src="ADA_Exercises_Wk03_Library.js"></script>
